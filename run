@@ -1,0 +1,5 @@
+#!/bin/bash
+mkdir data
+mv ./GraphX-tutorial-master/notebooks/* ./notebook/
+mv ./GraphX-tutorial-master/datasets/* ./data/
+./bin/zeppelin.sh

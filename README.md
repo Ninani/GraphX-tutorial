@@ -22,6 +22,6 @@ Go to __Running__ (or if you are a Windows user or do not have `docker-compose` 
 1. Run docker: `docker run --rm -i -t -p 8080:8080 dylanmei/zeppelin /bin/bash`
 2. `wget https://github.com/Ninani/GraphX-tutorial/archive/master.zip`
 3. `unzip master.zip`
-4. [run bash script]
-5. Run zeppelin: `./bin/zeppelin.sh`
+4. `chmod 755 run`
+5. `./run`
 6. Your Zeppelin notepad will be running at `http://${YOUR_DOCKER_HOST}:8080`
