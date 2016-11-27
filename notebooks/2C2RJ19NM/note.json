@@ -1,0 +1,277 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n\n###Zbiór danych",
+      "dateUpdated": "Nov 27, 2016 6:42:42 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480228949450_1733304106",
+      "id": "20161127-064229_2011626314",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eZbiór danych\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 27, 2016 6:42:29 AM",
+      "dateStarted": "Nov 27, 2016 6:42:42 AM",
+      "dateFinished": "Nov 27, 2016 6:42:42 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\n\nhead -8 /usr/spark-2.0.1/data/graphx/followers.txt\n",
+      "dateUpdated": "Nov 27, 2016 6:42:57 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480223654601_1864546238",
+      "id": "20161127-051414_21453161",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "2 1\n4 1\n1 2\n6 3\n7 3\n7 6\n6 7\n3 7\n"
+      },
+      "dateCreated": "Nov 27, 2016 5:14:14 AM",
+      "dateStarted": "Nov 27, 2016 6:42:57 AM",
+      "dateFinished": "Nov 27, 2016 6:42:57 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\n\nhead -8 /usr/spark-2.0.1/data/graphx/users.txt\n",
+      "dateUpdated": "Nov 27, 2016 6:43:01 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480223703296_-702236268",
+      "id": "20161127-051503_969888656",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "1,BarackObama,Barack Obama\n2,ladygaga,Goddess of Love\n3,jeresig,John Resig\n4,justinbieber,Justin Bieber\n6,matei_zaharia,Matei Zaharia\n7,odersky,Martin Odersky\n8,anonsys\n"
+      },
+      "dateCreated": "Nov 27, 2016 5:15:03 AM",
+      "dateStarted": "Nov 27, 2016 6:43:01 AM",
+      "dateFinished": "Nov 27, 2016 6:43:01 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n###Przykład: \u003cstrong\u003eTriangle Counting\u003c/strong\u003e\n",
+      "dateUpdated": "Nov 27, 2016 6:47:21 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480229043930_1599350192",
+      "id": "20161127-064403_575656847",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003ePrzykład: \u003cstrong\u003eTriangle Counting\u003c/strong\u003e\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 27, 2016 6:44:03 AM",
+      "dateStarted": "Nov 27, 2016 6:46:59 AM",
+      "dateFinished": "Nov 27, 2016 6:46:59 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\nimport org.apache.spark.graphx.{GraphLoader, PartitionStrategy}\n\n// Load the edges in canonical order and partition the graph for triangle count\nval graph \u003d GraphLoader.edgeListFile(sc, \"file:///usr/spark-2.0.1/data/graphx/followers.txt\", true)\n  .partitionBy(PartitionStrategy.RandomVertexCut)\n// Find the triangle count for each vertex\nval triCounts \u003d graph.triangleCount().vertices\n// Join the triangle counts with the usernames\nval users \u003d sc.textFile(\"file:///usr/spark-2.0.1/data/graphx/users.txt\").map { line \u003d\u003e\n  val fields \u003d line.split(\",\")\n  (fields(0).toLong, fields(1))\n}\nval triCountByUsername \u003d users.join(triCounts).map { case (id, (username, tc)) \u003d\u003e\n  (username, tc)\n}\n\nprintln(triCountByUsername.collect().mkString(\"\\n\"))",
+      "dateUpdated": "Nov 27, 2016 6:49:21 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480221290117_-1654938010",
+      "id": "20161127-043450_1351444738",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nimport org.apache.spark.graphx.{GraphLoader, PartitionStrategy}\n\ngraph: org.apache.spark.graphx.Graph[Int,Int] \u003d org.apache.spark.graphx.impl.GraphImpl@6606794e\n\ntriCounts: org.apache.spark.graphx.VertexRDD[Int] \u003d VertexRDDImpl[144] at RDD at VertexRDD.scala:57\n\nusers: org.apache.spark.rdd.RDD[(Long, String)] \u003d MapPartitionsRDD[149] at map at \u003cconsole\u003e:29\n\ntriCountByUsername: org.apache.spark.rdd.RDD[(String, Int)] \u003d MapPartitionsRDD[153] at map at \u003cconsole\u003e:35\n(justinbieber,0)\n(matei_zaharia,1)\n(ladygaga,0)\n(BarackObama,0)\n(jeresig,1)\n(odersky,1)\n"
+      },
+      "dateCreated": "Nov 27, 2016 4:34:50 AM",
+      "dateStarted": "Nov 27, 2016 4:44:15 AM",
+      "dateFinished": "Nov 27, 2016 4:44:17 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n###Zadanie\n\n",
+      "dateUpdated": "Nov 27, 2016 6:47:52 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480223785182_957509190",
+      "id": "20161127-051625_1808183999",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eZadanie\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 27, 2016 5:16:25 AM",
+      "dateStarted": "Nov 27, 2016 6:47:47 AM",
+      "dateFinished": "Nov 27, 2016 6:47:47 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "dateUpdated": "Nov 27, 2016 6:47:47 AM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480229267888_-1625308605",
+      "id": "20161127-064747_80543448",
+      "dateCreated": "Nov 27, 2016 6:47:47 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "04_TriangleCounting",
+  "id": "2C2RJ19NM",
+  "angularObjects": {
+    "2C2C3EZB3:shared_process": [],
+    "2C3ZGJY97:shared_process": [],
+    "2C3SNFNBU:shared_process": [],
+    "2C3D6JQ57:shared_process": [],
+    "2C3E6UDKP:shared_process": [],
+    "2C34GDA5F:shared_process": [],
+    "2C2588HFQ:shared_process": [],
+    "2C4K6UWHS:shared_process": [],
+    "2C4GVEV3N:shared_process": []
+  },
+  "config": {
+    "looknfeel": "default"
+  },
+  "info": {}
+}
