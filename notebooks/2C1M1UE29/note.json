@@ -1,8 +1,8 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n\n###Zbiór danych\n\nFragment powieści \u003cem\u003eThe Sorrows of Werther\u003c/em\u003e składający się ze 150 słów.",
-      "dateUpdated": "Nov 27, 2016 6:42:20 AM",
+      "text": "%md\n\n###Zbiór danych\n\nFragment powieści \u003cem\u003eThe Sorrows of Werther\u003c/em\u003e składający się ze 150 wyrazów.",
+      "dateUpdated": "Nov 28, 2016 12:51:03 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -33,11 +33,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch3\u003eZbiór danych\u003c/h3\u003e\n\u003cp\u003eFragment powieści \u003cem\u003eThe Sorrows of Werther\u003c/em\u003e składający się ze 150 słów.\u003c/p\u003e\n"
+        "msg": "\u003ch3\u003eZbiór danych\u003c/h3\u003e\n\u003cp\u003eFragment powieści \u003cem\u003eThe Sorrows of Werther\u003c/em\u003e składający się ze 150 wyrazów.\u003c/p\u003e\n"
       },
       "dateCreated": "Nov 27, 2016 6:30:08 AM",
-      "dateStarted": "Nov 27, 2016 6:39:49 AM",
-      "dateFinished": "Nov 27, 2016 6:39:49 AM",
+      "dateStarted": "Nov 28, 2016 12:51:03 AM",
+      "dateFinished": "Nov 28, 2016 12:51:03 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -82,8 +82,8 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n###Przykład: __Word Count__\n\nPoniższy przykład wypisuje pary typu (String, Int), w których zapisane jest (słowo, liczba wystąpień słowa w tekście). \n",
-      "dateUpdated": "Nov 27, 2016 5:34:32 PM",
+      "text": "%md\n\n###Przykład: __Word Count__\n\nPoniższy przykład wypisuje pary typu (String, Int), w których zapisane jest (wyraz, liczba wystąpień w tekście). \n",
+      "dateUpdated": "Nov 28, 2016 12:50:59 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -114,11 +114,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch3\u003ePrzykład: \u003cstrong\u003eWord Count\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003ePoniższy przykład wypisuje pary typu (String, Int), w których zapisane jest (słowo, liczba wystąpień słowa w tekście).\u003c/p\u003e\n"
+        "msg": "\u003ch3\u003ePrzykład: \u003cstrong\u003eWord Count\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003ePoniższy przykład wypisuje pary typu (String, Int), w których zapisane jest (wyraz, liczba wystąpień w tekście).\u003c/p\u003e\n"
       },
       "dateCreated": "Nov 27, 2016 5:55:29 AM",
-      "dateStarted": "Nov 27, 2016 6:39:12 AM",
-      "dateFinished": "Nov 27, 2016 6:39:12 AM",
+      "dateStarted": "Nov 28, 2016 12:50:55 AM",
+      "dateFinished": "Nov 28, 2016 12:50:56 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -366,8 +366,8 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark\n\nimport org.apache.spark.graphx._\nimport org.apache.spark.rdd.RDD\n\n// Create an array for vertices\nval usersArray \u003d Array(\n    (3L, (\"rxin\", \"student\")), \n    (7L, (\"jgonzal\", \"postdoc\")), \n    (5L, (\"franklin\", \"prof\")), \n    (2L, (\"istoica\", \"prof\"))\n    )\n// Create an array for edges\nval relationshipsArray \u003d Array(\n    Edge(3L, 7L, \"collab\"), \n    Edge(5L, 3L, \"advisor\"), \n    Edge(2L, 5L, \"colleague\"), \n    Edge(5L, 7L, \"pi\")\n    )\n                       \n                       \n// Create an RDD for the vertices\nval usersRDD: RDD[(VertexId, (String, String))] \u003d sc.parallelize(usersArray)\n// Create an RDD for edges\nval relationshipsRDD: RDD[Edge[String]] \u003d sc.parallelize(relationshipsArray)\n//Create graph \nval graph: Graph[(String, String), String] \u003d Graph(usersRDD, relationshipsRDD)\n\n\n//         miejsce na rozwiązanie\n//          ....................\n\n",
-      "dateUpdated": "Nov 27, 2016 9:17:07 PM",
+      "text": "%spark\n\nimport org.apache.spark.graphx._\nimport org.apache.spark.rdd.RDD\n\n// Create an array for vertices\nval usersArray \u003d Array(\n    (3L, (\"rxin\", \"student\")), \n    (7L, (\"jgonzal\", \"postdoc\")), \n    (5L, (\"franklin\", \"prof\")), \n    (2L, (\"istoica\", \"prof\"))\n    )\n// Create an array for edges\nval relationshipsArray \u003d Array(\n    Edge(3L, 7L, \"collab\"), \n    Edge(5L, 3L, \"advisor\"), \n    Edge(2L, 5L, \"colleague\"), \n    Edge(5L, 7L, \"pi\")\n    )\n                       \n                       \n// Create an RDD for the vertices\nval usersRDD: RDD[(VertexId, (String, String))] \u003d sc.parallelize(usersArray)\n// Create an RDD for edges\nval relationshipsRDD: RDD[Edge[String]] \u003d sc.parallelize(relationshipsArray)\n//Create graph \nval graph: Graph[(String, String), String] \u003d Graph(usersRDD, relationshipsRDD)\n\n\n//         miejsce na twój kod\n//          ....................\n\n",
+      "dateUpdated": "Nov 28, 2016 12:15:33 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
