@@ -9,5 +9,5 @@ zeppelin:
   ports:
     - 8080:8080
   volumes:
-    - ./datasets:/usr/zeppelin/data
-    - ./notebooks:/usr/zeppelin/notebook
+    - ./datasets:/usr/zeppelin/data:z
+    - ./notebooks:/usr/zeppelin/notebook:z
