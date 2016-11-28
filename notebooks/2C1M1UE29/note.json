@@ -1,8 +1,49 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n\n###Zbiór danych\n\nFragment powieści \u003cem\u003eThe Sorrows of Werther\u003c/em\u003e składający się ze 150 wyrazów.",
-      "dateUpdated": "Nov 28, 2016 12:51:03 AM",
+      "text": "%md\n\n#__Word Count__\n\nPrzykład wypisuje pary typu (String, Int), w których zapisane jest (wyraz, liczba wystąpień w tekście). \n",
+      "dateUpdated": "Nov 28, 2016 8:34:01 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480226129775_907247170",
+      "id": "20161127-055529_200849664",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch1\u003e\u003cstrong\u003eWord Count\u003c/strong\u003e\u003c/h1\u003e\n\u003cp\u003ePrzykład wypisuje pary typu (String, Int), w których zapisane jest (wyraz, liczba wystąpień w tekście).\u003c/p\u003e\n"
+      },
+      "dateCreated": "Nov 27, 2016 5:55:29 AM",
+      "dateStarted": "Nov 28, 2016 8:34:01 AM",
+      "dateFinished": "Nov 28, 2016 8:34:01 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n###__Zbiór danych__\n\nFragment powieści \u003cem\u003eThe Sorrows of Werther\u003c/em\u003e składający się ze 150 wyrazów.\n\n###Wypisz zbiór",
+      "dateUpdated": "Nov 28, 2016 8:36:21 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -33,11 +74,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch3\u003eZbiór danych\u003c/h3\u003e\n\u003cp\u003eFragment powieści \u003cem\u003eThe Sorrows of Werther\u003c/em\u003e składający się ze 150 wyrazów.\u003c/p\u003e\n"
+        "msg": "\u003ch3\u003e\u003cstrong\u003eZbiór danych\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003eFragment powieści \u003cem\u003eThe Sorrows of Werther\u003c/em\u003e składający się ze 150 wyrazów.\u003c/p\u003e\n\u003ch3\u003eWypisz zbiór\u003c/h3\u003e\n"
       },
       "dateCreated": "Nov 27, 2016 6:30:08 AM",
-      "dateStarted": "Nov 28, 2016 12:51:03 AM",
-      "dateFinished": "Nov 28, 2016 12:51:03 AM",
+      "dateStarted": "Nov 28, 2016 8:36:21 AM",
+      "dateFinished": "Nov 28, 2016 8:36:21 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -82,8 +123,8 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n###Przykład: __Word Count__\n\nPoniższy przykład wypisuje pary typu (String, Int), w których zapisane jest (wyraz, liczba wystąpień w tekście). \n",
-      "dateUpdated": "Nov 28, 2016 12:50:59 AM",
+      "text": "%md\n\n###Wczytaj dane",
+      "dateUpdated": "Nov 28, 2016 8:37:49 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -109,22 +150,22 @@
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1480226129775_907247170",
-      "id": "20161127-055529_200849664",
+      "jobName": "paragraph_1480322215424_-1854971168",
+      "id": "20161128-083655_486577331",
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch3\u003ePrzykład: \u003cstrong\u003eWord Count\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003ePoniższy przykład wypisuje pary typu (String, Int), w których zapisane jest (wyraz, liczba wystąpień w tekście).\u003c/p\u003e\n"
+        "msg": "\u003ch3\u003eWczytaj dane\u003c/h3\u003e\n"
       },
-      "dateCreated": "Nov 27, 2016 5:55:29 AM",
-      "dateStarted": "Nov 28, 2016 12:50:55 AM",
-      "dateFinished": "Nov 28, 2016 12:50:56 AM",
+      "dateCreated": "Nov 28, 2016 8:36:55 AM",
+      "dateStarted": "Nov 28, 2016 8:37:49 AM",
+      "dateFinished": "Nov 28, 2016 8:37:49 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark\n\nval textFile \u003d sc.textFile(\"file:///usr/zeppelin/data/words150.txt\")\nval counts \u003d textFile.flatMap(line \u003d\u003e line.split(\" \"))\n                 .map(word \u003d\u003e (word, 1))\n                 .reduceByKey(_ + _)\ncounts.collect().foreach(println(_)) \n\n",
-      "dateUpdated": "Nov 27, 2016 11:06:37 AM",
+      "text": "%spark\n\nval textFile \u003d sc.textFile(\"file:///usr/zeppelin/data/words150.txt\")\n",
+      "dateUpdated": "Nov 28, 2016 8:38:31 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -154,17 +195,178 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "\ntextFile: org.apache.spark.rdd.RDD[String] \u003d file:///usr/zeppelin/data/words150.txt MapPartitionsRDD[247] at textFile at \u003cconsole\u003e:30\n\ncounts: org.apache.spark.rdd.RDD[(String, Int)] \u003d ShuffledRDD[250] at reduceByKey at \u003cconsole\u003e:34\n(sweet,1)\n(tranquil,1)\n(existence,,1)\n(created,1)\n(this,1)\n(possession,1)\n(greater,1)\n(existence,1)\n(am,2)\n(never,1)\n(grass,1)\n(with,2)\n(sense,1)\n(lie,1)\n(drawing,1)\n(When,,1)\n(upper,1)\n(dear,1)\n(now.,1)\n(my,5)\n(teems,1)\n(close,1)\n(friend,,1)\n(me,,1)\n(has,1)\n(happy,,1)\n(heart.,1)\n(among,1)\n(souls,1)\n(few,1)\n(absorbed,1)\n(down,1)\n(wonderful,1)\n(neglect,1)\n(into,1)\n(as,1)\n(throw,1)\n(impenetrable,1)\n(spot,,1)\n(stroke,1)\n(so,2)\n(myself,1)\n(sun,1)\n(single,1)\n(inner,1)\n(yet,1)\n(feel,2)\n(sanctuary,,1)\n(valley,1)\n(mere,1)\n(than,1)\n(alone,,1)\n(whole,1)\n(bliss,1)\n(stray,1)\n(around,1)\n(A,1)\n(steal,1)\n(meridian,1)\n(at,1)\n(incapable,1)\n(talents.,1)\n(mine.,1)\n(in,2)\n(which,2)\n(trees,,1)\n(trickling,1)\n(should,1)\n(for,1)\n(while,1)\n(charm,1)\n(tall,1)\n(taken,1)\n(present,1)\n(these,1)\n(spring,1)\n(serenity,1)\n(and,,1)\n(the,11)\n(stream;,1)\n(moment;,1)\n(foliage,1)\n(surface,1)\n(gleams,1)\n(a,3)\n(was,2)\n(entire,1)\n(mornings,1)\n(lovely,1)\n(soul,,1)\n(be,1)\n(enjoy,1)\n(that,2)\n(I,9)\n(to,1)\n(strikes,1)\n(of,8)\n(by,1)\n(like,2)\n(but,1)\n(vapour,1)\n(and,4)\n(exquisite,1)\n(artist,1)\n"
+        "msg": "\ntextFile: org.apache.spark.rdd.RDD[String] \u003d file:///usr/zeppelin/data/words150.txt MapPartitionsRDD[289] at textFile at \u003cconsole\u003e:33\n"
       },
       "dateCreated": "Nov 26, 2016 11:14:52 PM",
-      "dateStarted": "Nov 27, 2016 11:06:37 AM",
-      "dateFinished": "Nov 27, 2016 11:06:38 AM",
+      "dateStarted": "Nov 28, 2016 8:38:31 AM",
+      "dateFinished": "Nov 28, 2016 8:38:32 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n###Zadanie\n\nSpróbuj powyższy przykład napisać inaczej. Pamiętaj o różnicach pomiędzy operacjami typu __transformations__ i __actions__.\n\nPrzydatne linki: \n[Transformations](http://spark.apache.org/docs/latest/programming-guide.html#transformations)\n[Actions](http://spark.apache.org/docs/latest/programming-guide.html#actions)\n\nPodpowiedź: Jaką inną funkcją można zastąpić `reduceByKey()`?",
-      "dateUpdated": "Nov 27, 2016 8:11:33 PM",
+      "text": "%md\n\n###Stwórz pary (wyraz, liczba wystąpień w tekście)",
+      "dateUpdated": "Nov 28, 2016 8:39:31 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480322319277_1932297790",
+      "id": "20161128-083839_915693713",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eStwórz pary (wyraz, liczba wystąpień w tekście)\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 28, 2016 8:38:39 AM",
+      "dateStarted": "Nov 28, 2016 8:39:31 AM",
+      "dateFinished": "Nov 28, 2016 8:39:31 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\nval counts \u003d textFile.flatMap(line \u003d\u003e line.split(\" \"))\n                 .map(word \u003d\u003e (word, 1))\n                 .reduceByKey(_ + _)\n",
+      "dateUpdated": "Nov 28, 2016 8:39:54 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480322314932_-908919596",
+      "id": "20161128-083834_526966342",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\ncounts: org.apache.spark.rdd.RDD[(String, Int)] \u003d ShuffledRDD[292] at reduceByKey at \u003cconsole\u003e:37\n"
+      },
+      "dateCreated": "Nov 28, 2016 8:38:34 AM",
+      "dateStarted": "Nov 28, 2016 8:39:54 AM",
+      "dateFinished": "Nov 28, 2016 8:39:55 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n###Wypisz pary",
+      "dateUpdated": "Nov 28, 2016 8:40:28 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480322397554_-457469574",
+      "id": "20161128-083957_942393282",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eWypisz pary\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 28, 2016 8:39:57 AM",
+      "dateStarted": "Nov 28, 2016 8:40:28 AM",
+      "dateFinished": "Nov 28, 2016 8:40:28 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\ncounts.collect().foreach(println(_)) \n",
+      "dateUpdated": "Nov 28, 2016 8:40:50 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480322384932_1036125656",
+      "id": "20161128-083944_45717579",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "(sweet,1)\n(tranquil,1)\n(existence,,1)\n(created,1)\n(this,1)\n(possession,1)\n(greater,1)\n(existence,1)\n(am,2)\n(never,1)\n(grass,1)\n(with,2)\n(sense,1)\n(lie,1)\n(drawing,1)\n(When,,1)\n(upper,1)\n(dear,1)\n(now.,1)\n(my,5)\n(teems,1)\n(close,1)\n(friend,,1)\n(me,,1)\n(has,1)\n(happy,,1)\n(heart.,1)\n(among,1)\n(souls,1)\n(few,1)\n(absorbed,1)\n(down,1)\n(wonderful,1)\n(neglect,1)\n(into,1)\n(as,1)\n(throw,1)\n(impenetrable,1)\n(spot,,1)\n(stroke,1)\n(so,2)\n(myself,1)\n(sun,1)\n(single,1)\n(inner,1)\n(yet,1)\n(feel,2)\n(sanctuary,,1)\n(valley,1)\n(mere,1)\n(than,1)\n(alone,,1)\n(whole,1)\n(bliss,1)\n(stray,1)\n(around,1)\n(A,1)\n(steal,1)\n(meridian,1)\n(at,1)\n(incapable,1)\n(talents.,1)\n(mine.,1)\n(in,2)\n(which,2)\n(trees,,1)\n(trickling,1)\n(should,1)\n(for,1)\n(while,1)\n(charm,1)\n(tall,1)\n(taken,1)\n(present,1)\n(these,1)\n(spring,1)\n(serenity,1)\n(and,,1)\n(the,11)\n(stream;,1)\n(moment;,1)\n(foliage,1)\n(surface,1)\n(gleams,1)\n(a,3)\n(was,2)\n(entire,1)\n(mornings,1)\n(lovely,1)\n(soul,,1)\n(be,1)\n(enjoy,1)\n(that,2)\n(I,9)\n(to,1)\n(strikes,1)\n(of,8)\n(by,1)\n(like,2)\n(but,1)\n(vapour,1)\n(and,4)\n(exquisite,1)\n(artist,1)\n"
+      },
+      "dateCreated": "Nov 28, 2016 8:39:44 AM",
+      "dateStarted": "Nov 28, 2016 8:40:31 AM",
+      "dateFinished": "Nov 28, 2016 8:40:31 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n###__Zadanie__\n\nSpróbuj powyższy przykład napisać inaczej. Pamiętaj o różnicach pomiędzy operacjami typu __transformations__ i __actions__.\n\nPrzydatne linki: \n[Transformations](http://spark.apache.org/docs/latest/programming-guide.html#transformations)\n[Actions](http://spark.apache.org/docs/latest/programming-guide.html#actions)\n\nPodpowiedź: Jaką inną funkcją można zastąpić `reduceByKey()`?",
+      "dateUpdated": "Nov 28, 2016 8:41:12 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -195,17 +397,17 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch3\u003eZadanie\u003c/h3\u003e\n\u003cp\u003eSpróbuj powyższy przykład napisać inaczej. Pamiętaj o różnicach pomiędzy operacjami typu \u003cstrong\u003etransformations\u003c/strong\u003e i \u003cstrong\u003eactions\u003c/strong\u003e.\u003c/p\u003e\n\u003cp\u003ePrzydatne linki:\n\u003cbr  /\u003e\u003ca href\u003d\"http://spark.apache.org/docs/latest/programming-guide.html#transformations\"\u003eTransformations\u003c/a\u003e\n\u003cbr  /\u003e\u003ca href\u003d\"http://spark.apache.org/docs/latest/programming-guide.html#actions\"\u003eActions\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003ePodpowiedź: Jaką inną funkcją można zastąpić \u003ccode\u003ereduceByKey()\u003c/code\u003e?\u003c/p\u003e\n"
+        "msg": "\u003ch3\u003e\u003cstrong\u003eZadanie\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003eSpróbuj powyższy przykład napisać inaczej. Pamiętaj o różnicach pomiędzy operacjami typu \u003cstrong\u003etransformations\u003c/strong\u003e i \u003cstrong\u003eactions\u003c/strong\u003e.\u003c/p\u003e\n\u003cp\u003ePrzydatne linki:\n\u003cbr  /\u003e\u003ca href\u003d\"http://spark.apache.org/docs/latest/programming-guide.html#transformations\"\u003eTransformations\u003c/a\u003e\n\u003cbr  /\u003e\u003ca href\u003d\"http://spark.apache.org/docs/latest/programming-guide.html#actions\"\u003eActions\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003ePodpowiedź: Jaką inną funkcją można zastąpić \u003ccode\u003ereduceByKey()\u003c/code\u003e?\u003c/p\u003e\n"
       },
       "dateCreated": "Nov 27, 2016 5:20:33 AM",
-      "dateStarted": "Nov 27, 2016 8:08:51 PM",
-      "dateFinished": "Nov 27, 2016 8:08:51 PM",
+      "dateStarted": "Nov 28, 2016 8:41:12 AM",
+      "dateFinished": "Nov 28, 2016 8:41:12 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark\n\nval textFile \u003d sc.textFile(\"file:///usr/zeppelin/data/words150.txt\")\nval counts \u003d textFile.flatMap(line \u003d\u003e line.split(\" \"))\n                 .map(word \u003d\u003e (word, 1))\n                //  .reduceByKey(_ + _)\n\ncounts.collect().foreach(println(_)) \n",
-      "dateUpdated": "Nov 27, 2016 8:21:38 PM",
+      "text": "%spark\n\nval counts \u003d textFile.flatMap(line \u003d\u003e line.split(\" \"))\n                 .map(word \u003d\u003e (word, 1))\n                //  .reduceByKey(_ + _)\n\ncounts.collect().foreach(println(_)) \n",
+      "dateUpdated": "Nov 28, 2016 8:43:32 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -235,17 +437,17 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "\ntextFile: org.apache.spark.rdd.RDD[String] \u003d file:///usr/zeppelin/data/words150.txt MapPartitionsRDD[1] at textFile at \u003cconsole\u003e:27\n\ncounts: org.apache.spark.rdd.RDD[(String, Int)] \u003d MapPartitionsRDD[3] at map at \u003cconsole\u003e:30\n(A,1)\n(wonderful,1)\n(serenity,1)\n(has,1)\n(taken,1)\n(possession,1)\n(of,1)\n(my,1)\n(entire,1)\n(soul,,1)\n(like,1)\n(these,1)\n(sweet,1)\n(mornings,1)\n(of,1)\n(spring,1)\n(which,1)\n(I,1)\n(enjoy,1)\n(with,1)\n(my,1)\n(whole,1)\n(heart.,1)\n(I,1)\n(am,1)\n(alone,,1)\n(and,1)\n(feel,1)\n(the,1)\n(charm,1)\n(of,1)\n(existence,1)\n(in,1)\n(this,1)\n(spot,,1)\n(which,1)\n(was,1)\n(created,1)\n(for,1)\n(the,1)\n(bliss,1)\n(of,1)\n(souls,1)\n(like,1)\n(mine.,1)\n(I,1)\n(am,1)\n(so,1)\n(happy,,1)\n(my,1)\n(dear,1)\n(friend,,1)\n(so,1)\n(absorbed,1)\n(in,1)\n(the,1)\n(exquisite,1)\n(sense,1)\n(of,1)\n(mere,1)\n(tranquil,1)\n(existence,,1)\n(that,1)\n(I,1)\n(neglect,1)\n(my,1)\n(talents.,1)\n(I,1)\n(should,1)\n(be,1)\n(incapable,1)\n(of,1)\n(drawing,1)\n(a,1)\n(single,1)\n(stroke,1)\n(at,1)\n(the,1)\n(present,1)\n(moment;,1)\n(and,1)\n(yet,1)\n(I,1)\n(feel,1)\n(that,1)\n(I,1)\n(never,1)\n(was,1)\n(a,1)\n(greater,1)\n(artist,1)\n(than,1)\n(now.,1)\n(When,,1)\n(while,1)\n(the,1)\n(lovely,1)\n(valley,1)\n(teems,1)\n(with,1)\n(vapour,1)\n(around,1)\n(me,,1)\n(and,1)\n(the,1)\n(meridian,1)\n(sun,1)\n(strikes,1)\n(the,1)\n(upper,1)\n(surface,1)\n(of,1)\n(the,1)\n(impenetrable,1)\n(foliage,1)\n(of,1)\n(my,1)\n(trees,,1)\n(and,1)\n(but,1)\n(a,1)\n(few,1)\n(stray,1)\n(gleams,1)\n(steal,1)\n(into,1)\n(the,1)\n(inner,1)\n(sanctuary,,1)\n(I,1)\n(throw,1)\n(myself,1)\n(down,1)\n(among,1)\n(the,1)\n(tall,1)\n(grass,1)\n(by,1)\n(the,1)\n(trickling,1)\n(stream;,1)\n(and,,1)\n(as,1)\n(I,1)\n(lie,1)\n(close,1)\n(to,1)\n"
+        "msg": "\ncounts: org.apache.spark.rdd.RDD[(String, Int)] \u003d MapPartitionsRDD[296] at map at \u003cconsole\u003e:36\n(A,1)\n(wonderful,1)\n(serenity,1)\n(has,1)\n(taken,1)\n(possession,1)\n(of,1)\n(my,1)\n(entire,1)\n(soul,,1)\n(like,1)\n(these,1)\n(sweet,1)\n(mornings,1)\n(of,1)\n(spring,1)\n(which,1)\n(I,1)\n(enjoy,1)\n(with,1)\n(my,1)\n(whole,1)\n(heart.,1)\n(I,1)\n(am,1)\n(alone,,1)\n(and,1)\n(feel,1)\n(the,1)\n(charm,1)\n(of,1)\n(existence,1)\n(in,1)\n(this,1)\n(spot,,1)\n(which,1)\n(was,1)\n(created,1)\n(for,1)\n(the,1)\n(bliss,1)\n(of,1)\n(souls,1)\n(like,1)\n(mine.,1)\n(I,1)\n(am,1)\n(so,1)\n(happy,,1)\n(my,1)\n(dear,1)\n(friend,,1)\n(so,1)\n(absorbed,1)\n(in,1)\n(the,1)\n(exquisite,1)\n(sense,1)\n(of,1)\n(mere,1)\n(tranquil,1)\n(existence,,1)\n(that,1)\n(I,1)\n(neglect,1)\n(my,1)\n(talents.,1)\n(I,1)\n(should,1)\n(be,1)\n(incapable,1)\n(of,1)\n(drawing,1)\n(a,1)\n(single,1)\n(stroke,1)\n(at,1)\n(the,1)\n(present,1)\n(moment;,1)\n(and,1)\n(yet,1)\n(I,1)\n(feel,1)\n(that,1)\n(I,1)\n(never,1)\n(was,1)\n(a,1)\n(greater,1)\n(artist,1)\n(than,1)\n(now.,1)\n(When,,1)\n(while,1)\n(the,1)\n(lovely,1)\n(valley,1)\n(teems,1)\n(with,1)\n(vapour,1)\n(around,1)\n(me,,1)\n(and,1)\n(the,1)\n(meridian,1)\n(sun,1)\n(strikes,1)\n(the,1)\n(upper,1)\n(surface,1)\n(of,1)\n(the,1)\n(impenetrable,1)\n(foliage,1)\n(of,1)\n(my,1)\n(trees,,1)\n(and,1)\n(but,1)\n(a,1)\n(few,1)\n(stray,1)\n(gleams,1)\n(steal,1)\n(into,1)\n(the,1)\n(inner,1)\n(sanctuary,,1)\n(I,1)\n(throw,1)\n(myself,1)\n(down,1)\n(among,1)\n(the,1)\n(tall,1)\n(grass,1)\n(by,1)\n(the,1)\n(trickling,1)\n(stream;,1)\n(and,,1)\n(as,1)\n(I,1)\n(lie,1)\n(close,1)\n(to,1)\n"
       },
       "dateCreated": "Nov 27, 2016 5:56:43 AM",
-      "dateStarted": "Nov 27, 2016 8:20:34 PM",
-      "dateFinished": "Nov 27, 2016 8:20:37 PM",
+      "dateStarted": "Nov 28, 2016 8:43:32 AM",
+      "dateFinished": "Nov 28, 2016 8:43:33 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n###Przykład: __Property graph__\n\nKonstruujemy graf posiadający własności zarówno na wierzchołkach jak i na krawędziach ([patrz rysunek](http://spark.apache.org/docs/2.0.1/graphx-programming-guide.html#example-property-graph)). \nWykorzystujemy do tego celu kolekcje RDD.\n",
-      "dateUpdated": "Nov 27, 2016 8:07:27 PM",
+      "text": "%md\n\n#__Property graph__\n\nKonstruujemy graf posiadający własności zarówno na wierzchołkach jak i na krawędziach ([patrz rysunek](http://spark.apache.org/docs/2.0.1/graphx-programming-guide.html#example-property-graph)). \nWykorzystujemy do tego celu kolekcje RDD.\n",
+      "dateUpdated": "Nov 28, 2016 8:43:52 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -276,17 +478,58 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch3\u003ePrzykład: \u003cstrong\u003eProperty graph\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003eKonstruujemy graf posiadający własności zarówno na wierzchołkach jak i na krawędziach (\u003ca href\u003d\"http://spark.apache.org/docs/2.0.1/graphx-programming-guide.html#example-property-graph\"\u003epatrz rysunek\u003c/a\u003e).\n\u003cbr  /\u003eWykorzystujemy do tego celu kolekcje RDD.\u003c/p\u003e\n"
+        "msg": "\u003ch1\u003e\u003cstrong\u003eProperty graph\u003c/strong\u003e\u003c/h1\u003e\n\u003cp\u003eKonstruujemy graf posiadający własności zarówno na wierzchołkach jak i na krawędziach (\u003ca href\u003d\"http://spark.apache.org/docs/2.0.1/graphx-programming-guide.html#example-property-graph\"\u003epatrz rysunek\u003c/a\u003e).\n\u003cbr  /\u003eWykorzystujemy do tego celu kolekcje RDD.\u003c/p\u003e\n"
       },
       "dateCreated": "Nov 27, 2016 6:12:31 AM",
-      "dateStarted": "Nov 27, 2016 8:07:24 PM",
-      "dateFinished": "Nov 27, 2016 8:07:24 PM",
+      "dateStarted": "Nov 28, 2016 8:43:52 AM",
+      "dateFinished": "Nov 28, 2016 8:43:52 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark\n\nimport org.apache.spark.graphx._\nimport org.apache.spark.rdd.RDD\n\n// Create an array for vertices\nval usersArray \u003d Array(\n    (3L, (\"rxin\", \"student\")), \n    (7L, (\"jgonzal\", \"postdoc\")), \n    (5L, (\"franklin\", \"prof\")), \n    (2L, (\"istoica\", \"prof\"))\n    )\n// Create an array for edges\nval relationshipsArray \u003d Array(\n    Edge(3L, 7L, \"collab\"), \n    Edge(5L, 3L, \"advisor\"), \n    Edge(2L, 5L, \"colleague\"), \n    Edge(5L, 7L, \"pi\")\n    )\n                       \n                       \n// Create an RDD for the vertices\nval usersRDD: RDD[(VertexId, (String, String))] \u003d sc.parallelize(usersArray)\n// Create an RDD for edges\nval relationshipsRDD: RDD[Edge[String]] \u003d sc.parallelize(relationshipsArray)\n//Create graph \nval graph: Graph[(String, String), String] \u003d Graph(usersRDD, relationshipsRDD)\n\n\n//Create triplets\n// SELECT src.id, dst.id, src.attr, e.attr, dst.attr\n// FROM edges AS e LEFT JOIN vertices AS src, vertices AS dst\n// ON e.srcId \u003d src.Id AND e.dstId \u003d dst.Id\nval facts: RDD[String] \u003d\n  graph.triplets.map(triplet \u003d\u003e\n    triplet.srcAttr._1 + \" is the \" + triplet.attr + \" of \" + triplet.dstAttr._1)\nfacts.collect.foreach(println(_))\n\n",
-      "dateUpdated": "Nov 27, 2016 9:04:53 PM",
+      "text": "%md\n\n### Zaimportuj potrzebne zależności",
+      "dateUpdated": "Nov 28, 2016 8:44:31 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480322651983_423188366",
+      "id": "20161128-084411_495793645",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eZaimportuj potrzebne zależności\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 28, 2016 8:44:11 AM",
+      "dateStarted": "Nov 28, 2016 8:44:31 AM",
+      "dateFinished": "Nov 28, 2016 8:44:31 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\nimport org.apache.spark.graphx._\nimport org.apache.spark.rdd.RDD\n\n",
+      "dateUpdated": "Nov 28, 2016 8:45:01 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -316,17 +559,258 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "\nimport org.apache.spark.graphx._\n\nimport org.apache.spark.rdd.RDD\n\nusersArray: Array[(Long, (String, String))] \u003d Array((3,(rxin,student)), (7,(jgonzal,postdoc)), (5,(franklin,prof)), (2,(istoica,prof)))\n\nrelationshipsArray: Array[org.apache.spark.graphx.Edge[String]] \u003d Array(Edge(3,7,collab), Edge(5,3,advisor), Edge(2,5,colleague), Edge(5,7,pi))\n\nusersRDD: org.apache.spark.rdd.RDD[(org.apache.spark.graphx.VertexId, (String, String))] \u003d ParallelCollectionRDD[166] at parallelize at \u003cconsole\u003e:69\n\nrelationshipsRDD: org.apache.spark.rdd.RDD[org.apache.spark.graphx.Edge[String]] \u003d ParallelCollectionRDD[167] at parallelize at \u003cconsole\u003e:69\n\ngraph: org.apache.spark.graphx.Graph[(String, String),String] \u003d org.apache.spark.graphx.impl.GraphImpl@37701beb\n\nfacts: org.apache.spark.rdd.RDD[String] \u003d MapPartitionsRDD[185] at map at \u003cconsole\u003e:78\nrxin is the collab of jgonzal\nfranklin is the advisor of rxin\nistoica is the colleague of franklin\nfranklin is the pi of jgonzal\n\ninDegrees: org.apache.spark.graphx.VertexRDD[Int] \u003d VertexRDDImpl[189] at RDD at VertexRDD.scala:57\n(3,1)\n(5,1)\n(7,2)\n"
+        "msg": "\nimport org.apache.spark.graphx._\n\nimport org.apache.spark.rdd.RDD\n"
       },
       "dateCreated": "Nov 27, 2016 5:40:33 PM",
-      "dateStarted": "Nov 27, 2016 9:04:16 PM",
-      "dateFinished": "Nov 27, 2016 9:04:18 PM",
+      "dateStarted": "Nov 28, 2016 8:45:01 AM",
+      "dateFinished": "Nov 28, 2016 8:45:01 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md \n\n###Zadanie\n\nA. Wypisz ilu użytkowników ma tytuł profesora.\n\nPodpowiedź: Skorzystaj z `graph.vertices.filter`\n\nB. Wypisz ile krawędzi wychodzi z danego wierzchołka \n\nPodpowiedź: Skorzystaj z `inDegrees` ([szczegóły](http://spark.apache.org/docs/2.0.1/graphx-programming-guide.html#summary-list-of-operators))",
-      "dateUpdated": "Nov 27, 2016 9:16:35 PM",
+      "text": "%md\n\n###Zdefiniuj użytkowników i relacje między nimi",
+      "dateUpdated": "Nov 28, 2016 8:46:01 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480322724665_1568844708",
+      "id": "20161128-084524_931101463",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eZdefiniuj użytkowników i relacje między nimi\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 28, 2016 8:45:24 AM",
+      "dateStarted": "Nov 28, 2016 8:46:01 AM",
+      "dateFinished": "Nov 28, 2016 8:46:01 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\n// Create an array for vertices\nval usersArray \u003d Array(\n    (3L, (\"rxin\", \"student\")), \n    (7L, (\"jgonzal\", \"postdoc\")), \n    (5L, (\"franklin\", \"prof\")), \n    (2L, (\"istoica\", \"prof\"))\n    )\n    \n// Create an array for edges\nval relationshipsArray \u003d Array(\n    Edge(3L, 7L, \"collab\"), \n    Edge(5L, 3L, \"advisor\"), \n    Edge(2L, 5L, \"colleague\"), \n    Edge(5L, 7L, \"pi\")\n    )\n                       ",
+      "dateUpdated": "Nov 28, 2016 8:46:25 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480322703381_-1215380579",
+      "id": "20161128-084503_754303528",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nusersArray: Array[(Long, (String, String))] \u003d Array((3,(rxin,student)), (7,(jgonzal,postdoc)), (5,(franklin,prof)), (2,(istoica,prof)))\n\nrelationshipsArray: Array[org.apache.spark.graphx.Edge[String]] \u003d Array(Edge(3,7,collab), Edge(5,3,advisor), Edge(2,5,colleague), Edge(5,7,pi))\n"
+      },
+      "dateCreated": "Nov 28, 2016 8:45:03 AM",
+      "dateStarted": "Nov 28, 2016 8:46:25 AM",
+      "dateFinished": "Nov 28, 2016 8:46:26 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n###Stwórz kolekcje RDD dla wierzchołków i krawędzi",
+      "dateUpdated": "Nov 28, 2016 8:47:16 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480322797560_1000109213",
+      "id": "20161128-084637_5181169",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eStwórz kolekcje RDD dla wierzchołków i krawędzi\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 28, 2016 8:46:37 AM",
+      "dateStarted": "Nov 28, 2016 8:47:16 AM",
+      "dateFinished": "Nov 28, 2016 8:47:16 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\n// Create an RDD for the vertices\nval usersRDD: RDD[(VertexId, (String, String))] \u003d sc.parallelize(usersArray)\n// Create an RDD for edges\nval relationshipsRDD: RDD[Edge[String]] \u003d sc.parallelize(relationshipsArray)\n//Create graph \nval graph: Graph[(String, String), String] \u003d Graph(usersRDD, relationshipsRDD)\n\n",
+      "dateUpdated": "Nov 28, 2016 8:47:52 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480322788333_242908053",
+      "id": "20161128-084628_91713475",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nusersRDD: org.apache.spark.rdd.RDD[(org.apache.spark.graphx.VertexId, (String, String))] \u003d ParallelCollectionRDD[297] at parallelize at \u003cconsole\u003e:40\n\nrelationshipsRDD: org.apache.spark.rdd.RDD[org.apache.spark.graphx.Edge[String]] \u003d ParallelCollectionRDD[298] at parallelize at \u003cconsole\u003e:39\n\ngraph: org.apache.spark.graphx.Graph[(String, String),String] \u003d org.apache.spark.graphx.impl.GraphImpl@45463bd7\n"
+      },
+      "dateCreated": "Nov 28, 2016 8:46:28 AM",
+      "dateStarted": "Nov 28, 2016 8:47:52 AM",
+      "dateFinished": "Nov 28, 2016 8:47:53 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n###Stwórz trójki: __wierzchołek - krawędź - wierzchołek__\n###Wypisz zależności między użytkownikami",
+      "dateUpdated": "Nov 28, 2016 8:50:54 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480322879549_-309652664",
+      "id": "20161128-084759_737121341",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eStwórz trójki: \u003cstrong\u003ewierzchołek - krawędź - wierzchołek\u003c/strong\u003e\u003c/h3\u003e\n\u003ch3\u003eWypisz zależności między użytkownikami\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 28, 2016 8:47:59 AM",
+      "dateStarted": "Nov 28, 2016 8:50:51 AM",
+      "dateFinished": "Nov 28, 2016 8:50:51 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\n//Create triplets\n// SELECT src.id, dst.id, src.attr, e.attr, dst.attr\n// FROM edges AS e LEFT JOIN vertices AS src, vertices AS dst\n// ON e.srcId \u003d src.Id AND e.dstId \u003d dst.Id\n\nval facts: RDD[String] \u003d\n  graph.triplets.map(triplet \u003d\u003e\n    triplet.srcAttr._1 + \" is the \" + triplet.attr + \" of \" + triplet.dstAttr._1)\n// facts.collect.foreach(println(_))            //uncomment",
+      "dateUpdated": "Nov 28, 2016 8:51:42 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480322874507_-1001061762",
+      "id": "20161128-084754_1469810885",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nfacts: org.apache.spark.rdd.RDD[String] \u003d MapPartitionsRDD[319] at map at \u003cconsole\u003e:53\n"
+      },
+      "dateCreated": "Nov 28, 2016 8:47:54 AM",
+      "dateStarted": "Nov 28, 2016 8:51:42 AM",
+      "dateFinished": "Nov 28, 2016 8:51:42 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md \n\n###__Zadanie__\n\nA. Wypisz ilu użytkowników ma tytuł profesora.\n\n__Podpowiedź:__ Skorzystaj z `graph.vertices.filter`\n",
+      "dateUpdated": "Nov 28, 2016 8:53:27 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -357,17 +841,17 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch3\u003eZadanie\u003c/h3\u003e\n\u003cp\u003eA. Wypisz ilu użytkowników ma tytuł profesora.\u003c/p\u003e\n\u003cp\u003ePodpowiedź: Skorzystaj z \u003ccode\u003egraph.vertices.filter\u003c/code\u003e\u003c/p\u003e\n\u003cp\u003eB. Wypisz ile krawędzi wychodzi z danego wierzchołka\u003c/p\u003e\n\u003cp\u003ePodpowiedź: Skorzystaj z \u003ccode\u003einDegrees\u003c/code\u003e (\u003ca href\u003d\"http://spark.apache.org/docs/2.0.1/graphx-programming-guide.html#summary-list-of-operators\"\u003eszczegóły\u003c/a\u003e)\u003c/p\u003e\n"
+        "msg": "\u003ch3\u003e\u003cstrong\u003eZadanie\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003eA. Wypisz ilu użytkowników ma tytuł profesora.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003ePodpowiedź:\u003c/strong\u003e Skorzystaj z \u003ccode\u003egraph.vertices.filter\u003c/code\u003e\u003c/p\u003e\n"
       },
       "dateCreated": "Nov 27, 2016 5:58:27 PM",
-      "dateStarted": "Nov 27, 2016 9:16:28 PM",
-      "dateFinished": "Nov 27, 2016 9:16:28 PM",
+      "dateStarted": "Nov 28, 2016 8:53:27 AM",
+      "dateFinished": "Nov 28, 2016 8:53:27 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark\n\nimport org.apache.spark.graphx._\nimport org.apache.spark.rdd.RDD\n\n// Create an array for vertices\nval usersArray \u003d Array(\n    (3L, (\"rxin\", \"student\")), \n    (7L, (\"jgonzal\", \"postdoc\")), \n    (5L, (\"franklin\", \"prof\")), \n    (2L, (\"istoica\", \"prof\"))\n    )\n// Create an array for edges\nval relationshipsArray \u003d Array(\n    Edge(3L, 7L, \"collab\"), \n    Edge(5L, 3L, \"advisor\"), \n    Edge(2L, 5L, \"colleague\"), \n    Edge(5L, 7L, \"pi\")\n    )\n                       \n                       \n// Create an RDD for the vertices\nval usersRDD: RDD[(VertexId, (String, String))] \u003d sc.parallelize(usersArray)\n// Create an RDD for edges\nval relationshipsRDD: RDD[Edge[String]] \u003d sc.parallelize(relationshipsArray)\n//Create graph \nval graph: Graph[(String, String), String] \u003d Graph(usersRDD, relationshipsRDD)\n\n\n//         miejsce na twój kod\n//          ....................\n\n",
-      "dateUpdated": "Nov 28, 2016 12:15:33 AM",
+      "text": "%spark\n\n// graph.verticies.???          //put your code",
+      "dateUpdated": "Nov 28, 2016 8:56:30 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -395,17 +879,79 @@
       "apps": [],
       "jobName": "paragraph_1480277577749_-642976936",
       "id": "20161127-201257_1325234772",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
       "dateCreated": "Nov 27, 2016 8:12:57 PM",
-      "dateStarted": "Nov 27, 2016 9:09:25 PM",
-      "dateFinished": "Nov 27, 2016 9:09:27 PM",
+      "dateStarted": "Nov 28, 2016 8:56:30 AM",
+      "dateFinished": "Nov 28, 2016 8:56:30 AM",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%spark\n",
-      "dateUpdated": "Nov 27, 2016 8:18:46 PM",
-      "config": {},
+      "text": "%md\n\nB. Wypisz ile krawędzi wychodzi z danego wierzchołka \n\n__Podpowiedź:__ Skorzystaj z `inDegrees` ([szczegóły](http://spark.apache.org/docs/2.0.1/graphx-programming-guide.html#summary-list-of-operators))\n",
+      "dateUpdated": "Nov 28, 2016 8:53:43 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480323212817_925100669",
+      "id": "20161128-085332_1631631089",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eB. Wypisz ile krawędzi wychodzi z danego wierzchołka\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003ePodpowiedź:\u003c/strong\u003e Skorzystaj z \u003ccode\u003einDegrees\u003c/code\u003e (\u003ca href\u003d\"http://spark.apache.org/docs/2.0.1/graphx-programming-guide.html#summary-list-of-operators\"\u003eszczegóły\u003c/a\u003e)\u003c/p\u003e\n"
+      },
+      "dateCreated": "Nov 28, 2016 8:53:32 AM",
+      "dateStarted": "Nov 28, 2016 8:53:43 AM",
+      "dateFinished": "Nov 28, 2016 8:53:43 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\n// val outDegrees: VertexRDD[Int] \u003d ???         //put your code\n",
+      "dateUpdated": "Nov 28, 2016 8:57:45 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
       "settings": {
         "params": {},
         "forms": {}
@@ -413,7 +959,46 @@
       "apps": [],
       "jobName": "paragraph_1480277926512_-2084561545",
       "id": "20161127-201846_845496238",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
       "dateCreated": "Nov 27, 2016 8:18:46 PM",
+      "dateStarted": "Nov 28, 2016 8:57:45 AM",
+      "dateFinished": "Nov 28, 2016 8:57:45 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "\n",
+      "dateUpdated": "Nov 28, 2016 8:57:34 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480323429534_-785417964",
+      "id": "20161128-085709_391034921",
+      "dateCreated": "Nov 28, 2016 8:57:09 AM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
